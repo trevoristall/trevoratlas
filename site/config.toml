@@ -1,3 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
 title = "Homepage"
+
+[pygmentsOptions]
+pygmentsCodefences = true

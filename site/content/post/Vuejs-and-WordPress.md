@@ -12,21 +12,22 @@ This plugin was being created to make it easier for content and SEO team members
 
 To start out, I get the plugin initialized by adding our admin page. It's important to namespace our plugin as well to prevent global scope pollution.
 
-```php
+{{<highlight php>}}
 <?php namespace PageInfo;
 
 // We can pass add_action a closure instead of passing it a function name.
 add_action('admin_menu', function() {
-  add_menu_page(
-    'All of the pageinfo',
-    'Pageinfo',
-    'edit_pages',
-    'pageinfo',
-    __NAMESPACE__.'\\createAdminPage',
-    'dashicons-clipboard',
-    6);
+    add_menu_page(
+        'All of the pageinfo',
+        'Pageinfo',
+        'edit_pages',
+        'pageinfo',
+        __NAMESPACE__.'\\createAdminPage',
+        'dashicons-clipboard',
+        6
+    );
 });
-```
+{{</highlight>}}
 
 *read more about what [add_menu_page()](https://developer.wordpress.org/reference/functions/add_menu_page/) does.*
 
@@ -36,7 +37,7 @@ Next, we need to set up the "createAdminPage()" function. We'll use it to build 
 
 (In the future, I may just use the WordPress REST api to do this, since it saves a step.)
 
-```php
+{{<highlight php>}}
 function createAdminPage() {
   ?><div class="wrap"><?php
 
@@ -53,14 +54,13 @@ function createAdminPage() {
       'orderby' => 'ID',
       'order' => 'ASC'
     ]);
-```
+{{</highlight>}}
 
 *read more about [namespaces](http://www.phptherightway.com/#namespaces)*
 
 Now that we have that, we can create a new javascript object that contains all of those post's data and get our Vue object initialized.
 
-```php
-
+{{<highlight php>}}
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.min.js"></script>
 
 <script>
@@ -90,11 +90,11 @@ new Vue({
     }
   });
   </script>
-```
+{{</highlight>}}
 
 With this we can construct our view layout in html with Vue tags.
 
-```html
+{{<highlight html>}}
 <div id="pageInfo" style="margin: 0 auto;width: 80%; max-width: 1024px;">
 
   <h1>Pages &amp; Posts</h1>
@@ -123,10 +123,10 @@ With this we can construct our view layout in html with Vue tags.
     </tbody>
   </table>
 </div>
-```
+{{</highlight>}}
 
 Add it all together, and you get something like this (I've added a few css styles to clean it up)
 
-{% gist 44604a5a3aa63acef155cda7647ddbea pageinfo.php %}
+{{< gist trevoristall 44604a5a3aa63acef155cda7647ddbea >}}
 
 You can drop this plugin file into the wp-content/mu-plugins/ folder and forget about it.

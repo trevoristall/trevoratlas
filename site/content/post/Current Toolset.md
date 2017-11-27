@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Current Toolset"
 date:   2014-09-09
 categories:

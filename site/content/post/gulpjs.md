@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "GulpJS"
 date:   2014-11-06
 categories:
