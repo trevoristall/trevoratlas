@@ -5,8 +5,6 @@ tags:
 featured_image: /images/functional.jpg
 ---
 
-# Functional Programming in ES6
-
 Since I migrated one of the bigger projects at work to ES6, I've been more and more interested in functional programming and the idea of having little to no state mutation.
 
 I feel that Javascript lends itself very well to functional programming paradigms, especially with the changes presented in ES6. You can use the basic prototype methods of the existing data structures right out of the box and be 90% of the way there. You just have to understand what's happening internally.
@@ -25,10 +23,15 @@ example: 348597 -> [7,9,5,8,4,3]</blockquote>
 
 And my solution could look like this (there are shorter methods, but this is the one I wrote):
 
-```js
-const digitize = n => n.toString().split('').reverse().map(s => parseInt(s));
-```
-
+{{<highlight js>}}
+const digitize = (n) => {
+    return n
+        .toString()
+        .split('')
+        .reverse()
+        .map(s => parseInt(s));
+}
+{{</highlight>}}
 
 No variables are created, no existing data is mutated. It operates like a coin machine, data in, data out.
 
@@ -43,10 +46,14 @@ example: doubleChar("String") ==> "SSttrriinngg"</blockquote>
 
 And my solution:
 
-```js
-const doubleChar = str => str.split('').map((t) => t+t).join('');
-```
-
+{{<highlight js>}}
+const doubleChar = (str) => {
+    return str
+        .split('')
+        .map((t) => t+t)
+        .join('');
+}
+{{</highlight>}}
 
 Simple and easy to understand.
 

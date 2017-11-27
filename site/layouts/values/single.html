@@ -1,18 +1,30 @@
 {{ partial "head" . }}
 {{ partial "nav" . }}
-{{ partial "jumbotron" (dict "imageUrl" "/img/about_header.jpg" "title" "Values") }}
+{{ partial "jumbotron" (dict "imageUrl" "/img/about_header.jpg" "title" "Values" "text" "stuff") }}
 
 <div class="mw7 center ph3 pt4">
 
-  {{ partial "media-block" (dict "heading" "Shade-grown coffee" "text" "Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species." "imageUrl" "/img/about/shade-grown.jpg") }}
+  {{ partial "media-block" (dict "heading" "Hello," "text" "My name is Trevor Allen – I'm a Developer and Designer based in Washington, DC." "imageUrl" "/img/about/shade-grown.jpg") }}
 
-  {{ partial "media-block-reverse" (dict "heading" "Single origin" "text" "Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available." "imageUrl" "/img/about/single-origin.jpg") }}
+  <div class="center mw6 mv6">
+    <p class="center">
+      I've been working for the last 4 years for agencies and startups.
+      My experience is primarily with:</p>
+    <ul class="center mb3">
+      <li>Angular</li>
+      <li>React</li>
+      <li>Typescript</li>
+      <li>Node</li>
+      <li>PHP</li>
+      <li>Java 8</li>
+    </ul>
 
-  {{ partial "media-block" (dict "heading" "Sustainable farming" "text" "Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities." "imageUrl" "/img/about/sustainable-farming.jpg") }}
+    <p class="center">I've also dabbled in Go, PHP and Python</p>
+  </div>
 
-  {{ partial "media-block-reverse" (dict "heading" "Direct sourcing" "text" "Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality." "imageUrl" "/img/about/direct-sourcing.jpg") }}
+<p class="center mw6 mv6">I have a passion for solving problems, perfecting my craft, and producing work that I am proud of. I enjoy turning ambitious ideas into reality and I hold myself to a high standard of excellence.</p>
 
-  {{ partial "media-block" (dict "heading" "Reinvest profits" "text" "We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog." "imageUrl" "/img/about/reinvest-profits.jpg") }}
+  {{ partial "media-block" (dict "heading" "" "text" "As a dedicated lifelong learner I spend a lot of my free time teaching myself new skills and concepts. When I'm not building websites or studying I ride my bike around the beautiful DMV area, practice calligraphy and write." "text2" "Biking is a great way to commute and keeps me in shape since I spend so much time at the computer. Calligraphy and hand lettering are how I like to express myself visually, and writing is a cathartic exercise." "imageUrl" "/img/calligraphy.jpg") }}
 </div>
 
 {{ partial "footer" . }}
